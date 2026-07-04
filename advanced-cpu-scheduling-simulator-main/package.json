@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "sh -c 'BACK_PID=\"\"; if ! lsof -i :3001 -sTCP:LISTEN >/dev/null 2>&1; then npm run build:backend || exit 1; node backend/server.mjs & BACK_PID=$!; until curl -sf http://localhost:3001/api/health >/dev/null 2>&1; do sleep 0.2; done; else echo \"Backend already running on port 3001, reusing it.\"; fi; trap \"[ -n \\\"$BACK_PID\\\" ] && kill $BACK_PID 2>/dev/null\" EXIT; vite'",
+  "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
     "dev:frontend": "vite",
     "dev:backend": "node backend/server.mjs",
     "build": "vite build",
-    "build:backend": "clang++ -std=c++17 -O2 backend/cpp/*.cpp backend/cpp/algorithms/*.cpp -o backend/scheduler_engine",
+  "build:backend": "node backend/js/build_engine.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -81,6 +81,7 @@
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "concurrently": "^8.2.0"
   }
 }

@@ -17,16 +17,16 @@
 
 ## 🚀 Tech Stack
 
-- **Frontend Framework**: [React](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Language**: TypeScript
+- **Frontend**: [React](https://react.dev/), [Vite](https://vitejs.dev/), [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/)
+- **Backend**: [Node.js](https://nodejs.org/), C++ (High-performance scheduling engine)
+- **Language**: TypeScript, C++
   
- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus)
 
 ---
 
@@ -101,10 +101,25 @@
 
 ## 🛠 Installation & Setup
 
+### Prerequisites
+- Node.js (v18+ recommended)
+- A C++ Compiler (GCC, Clang, or MSVC for Windows)
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/advanced-cpu-scheduling-simulator.git
-   cd advanced-cpu-scheduling-simulator
+   git clone https://github.com/ashutosh454/CPU-Scheduling-Simulator.git
+   cd CPU-Scheduling-Simulator/advanced-cpu-scheduling-simulator-main
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server (this will also automatically compile the C++ backend):
+   ```bash
+   npm run dev
+   ```
 
 ## 👥 Contributors
 
